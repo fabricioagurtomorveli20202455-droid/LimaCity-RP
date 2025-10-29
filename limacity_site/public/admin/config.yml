@@ -1,0 +1,52 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: "https://tu-dominio.com"
+logo_url: "/assets/logo.svg"
+
+collections:
+  - name: "normativas"
+    label: "Normativas"
+    folder: "content/normativas"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Cuerpo", name: "body", widget: "markdown" }
+
+  - name: "equipo"
+    label: "Equipo"
+    folder: "content/equipo"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nombre", name: "nombre", widget: "string" }
+      - { label: "Rol", name: "rol", widget: "string" }
+      - { label: "Avatar", name: "avatar", widget: "image", required: false }
+      - { label: "Descripción", name: "bio", widget: "text", required: false }
+
+  - name: "tienda"
+    label: "Tienda"
+    folder: "content/tienda"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Producto", name: "producto", widget: "string" }
+      - { label: "Precio", name: "precio", widget: "number", valueType: "float" }
+      - { label: "Descripción", name: "descripcion", widget: "text" }
+      - { label: "URL de compra", name: "url", widget: "string", required: false }
+      - { label: "Activo", name: "activo", widget: "boolean", default: true }
+
+  - name: "actualizaciones"
+    label: "Actualizaciones"
+    folder: "content/actualizaciones"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Notas", name: "body", widget: "markdown" }

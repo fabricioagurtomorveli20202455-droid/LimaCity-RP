@@ -1,0 +1,11 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="80" viewBox="0 0 640 200">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop stop-color="#00c2ff"/>
+      <stop offset="1" stop-color="#ff66c4"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="200" fill="none"/>
+  <text x="20" y="120" font-family="Poppins, Arial, sans-serif" font-size="100" font-weight="900" fill="url(#g1)" stroke="#11162b" stroke-width="6">Lima City</text>
+</svg>
