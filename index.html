@@ -1,0 +1,100 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Lima City RP</title>
+  <meta name="description" content="Sitio oficial de Lima City RP: normativas, equipo, tienda y actualizaciones."/>
+  <link rel="icon" href="/assets/logo.svg"/>
+  <link rel="stylesheet" href="/assets/styles.css"/>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#" data-link="inicio">
+        <img src="/assets/logo.svg" alt="Lima City logo"/>
+        <div class="title">Lima City RP</div>
+      </a>
+      <nav style="margin-left:auto">
+        <a href="#" data-link="inicio">Inicio</a>
+        <a href="#" data-link="normativas">Normativas</a>
+        <a href="#" data-link="equipo">Equipo</a>
+        <a href="#" data-link="tienda">Tienda</a>
+        <a href="#" data-link="actualizaciones">Actualizaciones</a>
+        <a href="/admin" class="hide-mobile" title="Panel de edición">/admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- INICIO -->
+    <section class="hero" data-page="inicio">
+      <div class="card">
+        <h1>Bienvenido a Lima City RP</h1>
+        <p class="muted">Servidor de rol con enfoque en experiencias realistas y divertidas. Explora las <b>Normativas</b>, conoce al <b>Equipo</b>, visita la <b>Tienda</b> y revisa las últimas <b>Actualizaciones</b>.</p>
+        <a class="btn" href="#" data-link="tienda">Ir a la tienda</a>
+      </div>
+      <div class="card">
+        <div class="title">¿Qué hay de nuevo?</div>
+        <div class="small">Visita la sección de <b>Actualizaciones</b> para conocer los últimos cambios: nuevos clanes, mejoras de seguridad, minijuegos y más.</div>
+        <pre class="small">Consejo: El panel de edición está en <code class="inline">/admin</code> (Netlify Identity + Git Gateway).</pre>
+      </div>
+    </section>
+
+    <!-- NORMATIVAS -->
+    <section class="section" data-page="normativas" style="display:none">
+      <h2>Normativas</h2>
+      <div id="normativas-list" class="grid"></div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="section" data-page="equipo" style="display:none">
+      <h2>Equipo</h2>
+      <div id="equipo-list" class="grid"></div>
+    </section>
+
+    <!-- TIENDA -->
+    <section class="section" data-page="tienda" style="display:none">
+      <h2>Tienda</h2>
+      <div id="tienda-list" class="grid"></div>
+    </section>
+
+    <!-- ACTUALIZACIONES -->
+    <section class="section" data-page="actualizaciones" style="display:none">
+      <h2>Actualizaciones</h2>
+      <div id="updates-list" class="grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Lima City. Diseñado para la comunidad de roleplayers. — Panel en <code class="inline">/admin</code>
+  </footer>
+
+  <script>
+  // Pequeño índice de archivos de contenido para que el front los cargue
+  window.__INDEX__ = {
+    normativas: [
+      "/content/normativas/respeto.md",
+      "/content/normativas/juego_justo.md"
+    ],
+    equipo: [
+      "/content/equipo/luis-perez.md",
+      "/content/equipo/sofia-martinez.md",
+      "/content/equipo/diego-torres.md"
+    ],
+    tienda: [
+      "/content/tienda/paquete-vip.md",
+      "/content/tienda/paquete-propiedades.md",
+      "/content/tienda/paquete-monedas.md"
+    ],
+    actualizaciones: [
+      "/content/actualizaciones/2025-08-01-mejoras.md",
+      "/content/actualizaciones/2025-09-15-clanes.md",
+      "/content/actualizaciones/2025-10-05-seguridad.md"
+    ]
+  };
+  </script>
+  <script src="/assets/site.js"></script>
+</body>
+</html>
